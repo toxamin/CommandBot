@@ -3,8 +3,6 @@ const bot = new Discord.Client();
 var fs = require("fs");
 var oldAuthor;
 
-// ADD YOUR BOT'S TOKEN HERE
-const token = "YOUR_BOTS_TOKEN";
 
 bot.on('ready', () => {
   
@@ -123,4 +121,4 @@ function createCommand(desc,b,com)
 	return;
 }
 
-bot.login(token);
+bot.login(process.env.BOT_TOKEN);
